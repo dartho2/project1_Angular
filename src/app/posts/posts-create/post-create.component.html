@@ -1,13 +1,37 @@
 <h1>Post create post-create.component</h1>
 <mat-card>
+        <form (submit)="onAddPost(postForm)" #postForm="ngForm">
         <mat-form-field>
-                <input matInput placeholder="text" [(ngModel)]="enteredTitle">
+                <input 
+                matInput 
+                placeholder="text"
+                name="title" 
+                ngModel
+                required
+                minlength="5"
+                #title="ngModel">
+                <mat-error *ngIf="title.invalid"> Please enter u titile </mat-error>
         </mat-form-field>
+
         <mat-form-field>
-                <mat-label>sdsd</mat-label>
-                <textarea matInput rows="1"[(ngModel)]="enteredContent"></textarea>
+                <mat-label>Content</mat-label>
+                <textarea 
+                matInput 
+                rows="1"
+                name="content"
+                ngModel
+                required
+                minlength="5"
+                #content="ngModel"></textarea>
+                <mat-error *ngIf="content.invalid"> Please enter u content </mat-error>
         </mat-form-field>
+
+        <button 
+                mat-raised-button 
+                color="primary" 
+                type="submit">Save Posts</button>
+        </form>
 </mat-card>
 
-<button mat-raised-button color="primary" (click)="onAddPost()">Save Posts</button>
+
 
