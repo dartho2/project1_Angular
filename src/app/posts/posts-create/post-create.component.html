@@ -1,11 +1,13 @@
 <h1>Post create post-create.component</h1>
 <mat-card>
-<mat-form-field>
-        <mat-label>sdsd</mat-label>
-<textarea matInput rows="1"[(ngModel)]="enteredValue"></textarea>
-</mat-form-field>
+        <mat-form-field>
+                <input matInput placeholder="text" [(ngModel)]="enteredTitle">
+        </mat-form-field>
+        <mat-form-field>
+                <mat-label>sdsd</mat-label>
+                <textarea matInput rows="1"[(ngModel)]="enteredContent"></textarea>
+        </mat-form-field>
 </mat-card>
 
-<button mat-raised-button color="primary" (click)="sendToConsole()">Save Posts</button>
+<button mat-raised-button color="primary" (click)="onAddPost()">Save Posts</button>
 
-<p>{{ newPost }}</p>
