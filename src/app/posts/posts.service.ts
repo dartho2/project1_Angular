@@ -24,8 +24,8 @@ export class PostsService {
                     };
                 });
             }))
-        .subscribe((transformedPosts)=> {                       // transformedPosts because we need chane mongo "_id" to "id"
-            this.posts = transformedPosts.posts;
+        .subscribe(transformedPosts => {                       // transformedPosts because we need chane mongo "_id" to "id"
+            this.posts = transformedPosts;
             this.postsUpdated.next([...this.posts]);
         });
     }
