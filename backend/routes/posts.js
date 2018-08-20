@@ -24,12 +24,12 @@ const storage =multer.diskStorage({
     }
 });
 
-router.post("", multer({storage: storage}).single("image"), (req, res, next) => {
+router.post("", multer({storage: storage}).single("images"), (req, res, next) => {
     const url = req.protocol + '://' + req.get("host");
     const post = new Post({
         title: req.body.title,
         content: req.body.content,
-        imagePath: url + "/image/" + req.file.filename
+        imagePath: url + "/images/" + req.file.filename
 });
 
 post.save().then(createdPost => {
@@ -46,6 +46,8 @@ post.save().then(createdPost => {
 });
 });
 });
+
+
 router.put("/:id", (req, res, next) => {
 const post = new Post({
     _id: req.body.id,

@@ -1,0 +1,25 @@
+.mat-expansion-panel-body {
+    display: inline;
+}
+.show-image>img {
+    max-height: 200px;
+}
+.show-content {
+    width: 40%;
+	padding: 20px;
+	display: inline-block;
+}
+.mat-expansion-panel-body {
+    width: 40%;
+	padding: 20px;
+	display: inline-block;
+}
+.panel-default {
+    height: 100%;
+}
+.center {
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+    font-family: fantasy;
+}
