@@ -15,3 +15,11 @@ input[type="file"] {
 .img-upload {
     text-align: left;
 }
+.image-preview {
+    height: 5rem;
+    margin: 1rem 0;
+    text-align: left;
+}
+.image-preview img {
+    height: 100%;
+}
