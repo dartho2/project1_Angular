@@ -1,0 +1,17 @@
+mat-spinner {
+    text-align: center;
+    margin: auto;
+}
+.mat-raised-button {
+    display: block;
+    margin:auto;
+}
+input[type="file"] {
+    visibility: hidden;
+}
+.mat-form-field {
+    display: block;
+}
+.img-upload {
+    text-align: left;
+}

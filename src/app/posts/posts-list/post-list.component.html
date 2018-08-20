@@ -7,8 +7,10 @@
         </mat-expansion-panel-header>
         <p>{{post.content}}</p>
         <mat-action-row>
-            <button mat-button color="primary">Edit</button>
-            <button mat-button color="warn">Deleted</button>
+            <a mat-button [routerLink]="['/edit', post.id]" color="primary">Edit</a>
+            <button mat-button color="default" (click)="postDelete(post.id)">deleted</button> 
+            <!-- if posts add and deleted dont send id for deleted -->
+            <!-- <app-post-delete></app-post-delete> -->
         </mat-action-row>
     </mat-expansion-panel>
 </mat-accordion>

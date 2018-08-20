@@ -1,5 +1,49 @@
+/* @import '~bootstrap/dist/css/bootstrap.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', sans-serif; }
+main { padding-top: 55px}
+.navbar-expand-md .navbar-nav .dropdown-menu {
+    margin-left: -76px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.spacer {
+    flex: 1 1 auto; 
+}
+.active-linka {
+    /* webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    background-color: transparent!important;
+    border-color: #fff!important;
+    border: 2px solid #fff!important;
+    background-color: transparent!important; */
+    color: #fff!important;
+}
+.navbar-expand-lg {
+    background: #2bbbad;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(12, 116, 106);
+}
+/* a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.mat-stroked-button.mat-bluee {
+    color:#b7b7b7;
+    background-color: 3f51b5;
+    text-decoration: none;
+} */
+
 /* npm run start:server */
