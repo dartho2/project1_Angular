@@ -4,7 +4,8 @@ const mongoose = require('mongoose');
 const path = require("path");
 const app = express();
 const db = "mongodb://darth:pawel1988@ds217002.mlab.com:17002/angulardb"
-const PostRoutes = require("./routes/posts");
+const postRoutes = require("./routes/posts");
+const userRoutes = require("./routes/user");
 
 mongoose.connect(db, err => {
     if (err) {
@@ -29,6 +30,6 @@ app.use((req,res,next) =>{
     );
     next();
 });
-
-app.use("/api/posts", PostRoutes);
+app.use("/api/user", userRoutes);
+app.use("/api/posts", postRoutes);
 module.exports = app;

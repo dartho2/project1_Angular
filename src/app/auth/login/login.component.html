@@ -1,0 +1,27 @@
+<mat-card>
+    <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+        <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+        <label for="inputEmail" class="sr-only">Email address</label>
+
+        <mat-form-field>
+            <input matInput name="email" ngModel #emailInput="ngModel" type="email" placeholder="email" required email>
+            <mat-error *ngIf="emailInput.invalid"> Please enter u email </mat-error>
+        </mat-form-field>
+
+        <label for="password" class="sr-only">Password</label>
+
+        <mat-form-field>
+            <input matInput type="password" name="password" ngModel #passwordInput="ngModel"  placeholder="password" required password>
+            <mat-error *ngIf="passwordInput.invalid"> Please enter u password </mat-error>
+        </mat-form-field>
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button mat-raised-button color="primary" type="submit">Login</button>
+    </form>
+
+</mat-card>
