@@ -38,6 +38,9 @@ a {
 .navbar-light .navbar-nav .nav-link {
     color: rgb(12, 116, 106);
 }
+.mat-paginator-container {
+    margin-top: 1rem;
+}
 /* a:hover {
     text-decoration: none;
     color: white;
